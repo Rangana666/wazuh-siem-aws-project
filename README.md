@@ -14,6 +14,8 @@ This project demonstrates the implementation of a Security Information and Event
 * iptables (Firewall)
 * SSH
 
+![aws dash](screenshots/2.png)
+
 ---
 
 ## 🚀 Setup Process
