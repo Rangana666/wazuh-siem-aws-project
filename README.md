@@ -36,6 +36,7 @@ sudo apt update && sudo apt upgrade -y
 curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 sudo bash wazuh-install.sh -a -i
 ```
+![installing](screenshots/installing.png)
 
 ---
 
@@ -46,10 +47,14 @@ sudo bash wazuh-install.sh -a -i
 * EC2 instance had only 1GB RAM
 * Wazuh requires 4GB (recommended)
 
+![error1](screenshots/fixing_error_1.png)
+
 ✅ Solution:
 
 * Ignored requirement using `-i`
 * Added 2GB swap memory
+
+![error1](screenshots/fixed_error_1.png)
 
 ---
 
@@ -57,17 +62,25 @@ sudo bash wazuh-install.sh -a -i
 
 * Default 8GB storage was insufficient
 
+
 ✅ Solution:
 
 * Increased volume to 20GB
 * Resized partition using `growpart` and `resize2fs`
 
+![volumeadd](screenshots/volume.png)
+![done](screenshots/installed.png)
 ---
 
 ## 🔥 Attack Simulation
 
 * Performed multiple failed SSH login attempts
 * Wazuh detected brute-force behavior
+
+![attack](screenshots/attack.png)
+![attack](screenshots/ssh-log.png)
+![attack](screenshots/rule.png)
+
 
 ---
 
@@ -80,7 +93,7 @@ sudo bash wazuh-install.sh -a -i
   <rules_id>5760</rules_id>
 </active-response>
 ```
-
+![ruleadd](screenshots/rules.png)
 ---
 
 ## 📊 Results
@@ -89,25 +102,7 @@ sudo bash wazuh-install.sh -a -i
 * Triggered rule-based alerts
 * Automatically blocked attacker IP using iptables
 
----
-
-## 📸 Screenshots
-
-### 🔍 SSH Attack Detection
-
-![SSH Alerts](screenshots/alert.png)
-
-### ⚔️ Failed Login Attempts
-
-![SSH Attack](screenshots/ssh_attack.png)
-
-### 🚫 IP Blocked
-
-![IP Block](screenshots/ip_block.png)
-
-### 🤖 Active Response Logs
-
-![Active Response](screenshots/active_response.png)
+![ruleadd](screenshots/finalresult.png)
 
 ---
 
