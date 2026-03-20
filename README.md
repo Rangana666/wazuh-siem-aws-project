@@ -55,6 +55,8 @@ sudo bash wazuh-install.sh -a -i
 * Added 2GB swap memory
 
 ![error1](screenshots/fixed_error_1.png)
+![error1](screenshots/swap.png)
+
 
 ---
 
